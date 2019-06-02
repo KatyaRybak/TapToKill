@@ -26,7 +26,6 @@ public class ShapeLogic : MonoBehaviour
 
     void Update()
     {
-        //speed = shapeProperties.speed / ((Vector2)(transform.position - Camera.main.transform.position)).magnitude;
         MovedShapes();
     }
 
@@ -34,7 +33,6 @@ public class ShapeLogic : MonoBehaviour
     void MovedShapes()
     {
         pointEnd = -spawnPosition;
-        //GetComponent<Rigidbody2D>().velocity = pointEnd* Mathf.Min(speed,0.5f);
         GetComponent<Rigidbody2D>().velocity = pointEnd/7 * MainLogic.timeMultiplier;
         if (Time.timeScale > 0)
         {
